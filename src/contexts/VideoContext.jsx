@@ -11,7 +11,7 @@ function VideoContextProvider({ children }) {
 
     const fetchVideos = async (searchQuery) => {
         try {
-            const API_KEY = 'AIzaSyCnFpBgBrE4OXjKsXkEiyDp2nEBMwb5o74';
+            const API_KEY = 'AIzaSyBeXNBH2LEO3pC0qovx6xkmL4KjoExj0Ig';
             const MAX_RESULTS = 20;
 
             const response = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {

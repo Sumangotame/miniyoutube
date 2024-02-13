@@ -20,18 +20,20 @@ function LoginPage() {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold mb-4">Login</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center justify-center">Login</h1>
+        <label htmlFor="username" className=' mb-5'>Username:</label><br />
         <input
           type="text"
           placeholder="Username"
-          className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full"
+          className="border border-gray-600 rounded-md px-3 py-2 mb-4 w-full"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        <label htmlFor="username" className=' mb-5'>Password:</label><br />
         <input
           type="password"
           placeholder="Password"
-          className="border border-gray-300 rounded-md px-3 py-2 mb-4 w-full"
+          className="border border-gray-600 rounded-md px-3 py-2 mb-4 w-full"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
