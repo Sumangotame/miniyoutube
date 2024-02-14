@@ -8,6 +8,10 @@ function VideoPage() {
 
     const { fetchVideos, videos, searchQuery } = useContext(VideoContext);
     const [loading, setLoading] = useState(true);
+    useEffect((searchQuery) => {
+        fetchVideos(searchQuery),
+            setLoading(false);
+    }, [searchQuery])
     const handleSearch = (searchQuery) => {
         setLoading(true);
         fetchVideos(searchQuery);
