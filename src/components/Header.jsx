@@ -11,7 +11,7 @@ function Header({ onSearch }) {
     };
 
     return (
-        <div className="px-3 flex justify-between">
+        <div className="px-3 flex justify-between flex-col md:flex-row">
             <div className={`font-bold text-3xl ${darkMode ? 'text-white' : 'text-black'}`}>Logo</div>
             <div className=" flex items-center">
                 <input
