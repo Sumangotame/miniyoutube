@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-// App.js
-import React, { useContext } from 'react';
->>>>>>> 51f8628 (added dark mode)
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthContextProvider from './contexts/AuthContext';
 import VideoContextProvider from './contexts/VideoContext';
@@ -11,8 +6,7 @@ import PrivateRoute from './components/PrivateRoute';
 import LoginPage from './components/LoginPage';
 import VideoPage from './components/VideoPage';
 import VideoPlayer from './components/VideoPlayer';
-import DarkMode from './components/DarkMode';
-import { VideoContext } from './contexts/VideoContext';
+
 function App() {
 
 
