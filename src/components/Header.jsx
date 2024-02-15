@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import DarkMode from './DarkMode';
+import { VideoContext } from '../contexts/VideoContext';
 
 function Header({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState(' ');
+    const { darkMode } = useContext(VideoContext)
 
     const handleSearch = () => {
         onSearch(searchTerm);
@@ -10,7 +12,7 @@ function Header({ onSearch }) {
 
     return (
         <div className="px-3 flex justify-between">
-            <div className=' font-bold text-3xl'>Logo</div>
+            <div className={`font-bold text-3xl ${darkMode ? 'text-white' : 'text-black'}`}>Logo</div>
             <div className=" flex items-center">
                 <input
                     type="text"

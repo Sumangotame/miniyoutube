@@ -23,8 +23,9 @@ function VideoPage() {
     return (
         <div className={`${darkMode ? ' bg-slate-950' : ''}`}>
             <div className="p-4">
-                <h1 className={`px-3 text-3xl font-bold mb-4 ${darkMode ? 'text-white' : ''} text-black`}>Welcome to Video Player</h1>
                 <Header onSearch={handleSearch} />
+                <h1 className={`px-3 text-3xl font-bold mb-4 ${darkMode ? 'text-white' : ''} text-black`}>Welcome to Video Player</h1>
+
                 {loading ? (
                     <p>Search Video First...</p>
                 ) : (
