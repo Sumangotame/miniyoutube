@@ -12,9 +12,11 @@ function VideoPage() {
         fetchVideos(searchQuery),
             setLoading(false);
     }, [searchQuery])
+    
     const handleSearch = (searchQuery) => {
         setLoading(true);
         fetchVideos(searchQuery);
+
         setLoading(false);
     };
 
