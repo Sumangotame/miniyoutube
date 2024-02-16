@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { VideoContext } from '../contexts/VideoContext'
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 const DarkMode = () => {
     const { darkMode, toggleDarkMode } = useContext(VideoContext)
     useEffect(() => {
@@ -11,9 +12,21 @@ const DarkMode = () => {
     }
     return (
         <div className="flex justify-end mb-4">
-            <button onClick={handleDarkMode} className="text-gray-500">
+            {/* <button onClick={handleDarkMode} className="text-gray-500">
                 {darkMode ? 'Light Mode' : 'Dark Mode'}
-            </button>
+            </button> */}
+            {/* <DarkModeToggle
+                onChange={handleDarkMode}
+                checked={darkMode}
+                size={80}
+            /> */}
+
+            <DarkModeSwitch
+                style={{ marginBottom: '2rem' }}
+                checked={darkMode}
+                onChange={handleDarkMode}
+                size={30}
+            />
         </div>
     )
 }
