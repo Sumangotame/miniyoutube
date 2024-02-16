@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AuthContextProvider from './contexts/AuthContext';
 import VideoContextProvider from './contexts/VideoContext';
@@ -6,6 +6,8 @@ import PrivateRoute from './components/PrivateRoute';
 import LoginPage from './components/LoginPage';
 import VideoPage from './components/VideoPage';
 import VideoPlayer from './components/VideoPlayer';
+
+
 
 function App() {
 

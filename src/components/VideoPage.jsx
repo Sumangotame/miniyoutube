@@ -6,24 +6,19 @@ import Header from './Header';
 
 function VideoPage() {
 
-    const { fetchVideos, videos, searchQuery, darkMode } = useContext(VideoContext);
-    const [loading, setLoading] = useState(true);
+    const { fetchVideos, videos, searchQuery, darkMode, setLoading, loading } = useContext(VideoContext);
     useEffect(() => {
         fetchVideos(searchQuery);
         setLoading(false);
     }, [searchQuery])
-    const handleSearch = () => {
-        setLoading(true);
-        fetchVideos(searchQuery);
-        setLoading(false);
-    };
+
 
 
 
     return (
         <div className={`${darkMode ? ' bg-slate-950' : ''}`}>
             <div className="p-4">
-                <Header onSearch={handleSearch} />
+                <Header />
                 <h1 className={`px-3 text-3xl font-bold mb-4 ${darkMode ? 'text-white' : ''} text-black`}>Welcome to Video Player</h1>
 
                 {loading ? (

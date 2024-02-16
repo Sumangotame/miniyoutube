@@ -1,19 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { VideoContext } from '../contexts/VideoContext';
 
 const Search = () => {
-    const [searchTerm, setSearchTerm] = useState(' ');
-
+    const { setSearchQuery, searchQuery,setLoading,fetchVideos } = useContext(VideoContext)
     const handleSearch = () => {
-        onSearch(searchTerm);
+        setLoading(true);
+        fetchVideos(searchQuery);
+        setLoading(false);
     };
+
     return (
         <div>
             <input
                 type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search videos..."
-                className="border text-black border-gray-300 rounded-md px-3 py-2 mr-2 outline-zinc-900 my-2"
+                className="border border-gray-300 rounded-md px-3 py-2 mr-2 outline-zinc-900 my-2"
             />
             <button
                 onClick={handleSearch}

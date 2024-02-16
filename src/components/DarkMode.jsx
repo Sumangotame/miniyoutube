@@ -22,7 +22,7 @@ const DarkMode = () => {
             /> */}
 
             <DarkModeSwitch
-                style={{ marginBottom: '2rem' }}
+                style={{ marginBottom: '1rem' }}
                 checked={darkMode}
                 onChange={handleDarkMode}
                 size={30}
