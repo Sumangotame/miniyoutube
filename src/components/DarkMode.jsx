@@ -25,7 +25,7 @@ const DarkMode = () => {
                 style={{ marginBottom: '1rem' }}
                 checked={darkMode}
                 onChange={handleDarkMode}
-                size={30}
+                size={35}
             />
         </div>
     )

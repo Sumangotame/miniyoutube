@@ -7,15 +7,10 @@ import LoginPage from './components/LoginPage';
 import VideoPage from './components/VideoPage';
 import VideoPlayer from './components/VideoPlayer';
 
-
-
 function App() {
-
-
   return (
     <Router>
       <AuthContextProvider>
-
         <VideoContextProvider>
           <div className={`bg-gray-100 min-h-screen`}>
             <Switch>

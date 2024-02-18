@@ -10,7 +10,7 @@ function VideoThumbnail({ video }) {
       onClick={() => playVideo(video)}
     >
       <img src={video.thumbnail} alt={video.title} className="mb-2 w-full" />
-      <p className={`text-2xl font-extrabold ${darkMode ? ' text-white' : 'text-black'}`}>{video.title}</p>
+      <p className={`text-xl font-extrabold ${darkMode ? ' text-white' : 'text-black'}`}>{video.title}</p>
     </div>
   );
 }
