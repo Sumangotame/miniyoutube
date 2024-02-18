@@ -19,7 +19,7 @@ function VideoContextProvider({ children }) {
 
     const fetchVideos = async () => {
         try {
-            const API_KEY = 'AIzaSyALg4nsnkN-n0z9eBRfmRTuYqtz8mbm4J0';
+            const API_KEY = 'AIzaSyA1viI_QDDBjl_gDtmyLilqjQbosVuWZGI';
             const MAX_RESULTS = 20;
 
             const response = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
@@ -44,9 +44,14 @@ function VideoContextProvider({ children }) {
         }
     };
 
-    const playVideo = (videoId) => {
-        history.push(`/video/${videoId}`);
+    const playVideo = (video) => {
+        history.push({
+            pathname: `/video/${video.id}`,
+            state: { videoTitle: video.title }
+        });
     };
+
+
 
     return (
         <VideoContext.Provider value={{ videos, fetchVideos, playVideo, setSearchQuery, darkMode, setDarkMode, toggleDarkMode, loading, setLoading }}>
